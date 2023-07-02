@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E7A1D7D92A517E2D00614B4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A1D7D82A517E2D00614B4A /* Assets.xcassets */; };
+		E7A1D7DC2A517E2D00614B4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A1D7DA2A517E2D00614B4A /* Main.storyboard */; };
+		E7A1D7ED2A517E7200614B4A /* RendererAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7A1D7E52A517E7200614B4A /* RendererAdapter.mm */; };
+		E7A1D7EE2A517E7200614B4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A1D7E72A517E7200614B4A /* main.m */; };
+		E7A1D7EF2A517E7200614B4A /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A1D7E92A517E7200614B4A /* GameViewController.m */; };
+		E7A1D7F02A517E7200614B4A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7A1D7EA2A517E7200614B4A /* AppDelegate.mm */; };
+		E7A1D7F32A517E7F00614B4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A1D7F22A517E7F00614B4A /* Foundation.framework */; };
+		E7A1D7F52A517E8300614B4A /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A1D7F42A517E8300614B4A /* Metal.framework */; };
+		E7A1D7F72A517E8700614B4A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A1D7F62A517E8700614B4A /* QuartzCore.framework */; };
+		E7A1D80A2A517F7000614B4A /* chip8main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7A1D7FE2A517F7000614B4A /* chip8main.cpp */; };
+		E7A1D80B2A517F7000614B4A /* emulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7A1D8012A517F7000614B4A /* emulator.cpp */; };
+		E7A1D80C2A517F7000614B4A /* stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7A1D8032A517F7000614B4A /* stack.cpp */; };
+		E7A1D80D2A517F7000614B4A /* rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7A1D8072A517F7000614B4A /* rectangle.cpp */; };
+		E7A1D80E2A517F7000614B4A /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7A1D8092A517F7000614B4A /* Renderer.cpp */; };
+		E7A1D8132A517FF400614B4A /* roms in Resources */ = {isa = PBXBuildFile; fileRef = E7A1D8122A517FF400614B4A /* roms */; };
+		E7A1D8162A51801C00614B4A /* basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = E7A1D8152A51801C00614B4A /* basic.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E7A1D7C92A517E2C00614B4A /* Chip8-Metal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chip8-Metal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7A1D7D82A517E2D00614B4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7A1D7DB2A517E2D00614B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7A1D7DF2A517E2D00614B4A /* Chip8_Metal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chip8_Metal.entitlements; sourceTree = "<group>"; };
+		E7A1D7E52A517E7200614B4A /* RendererAdapter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RendererAdapter.mm; sourceTree = "<group>"; };
+		E7A1D7E62A517E7200614B4A /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		E7A1D7E72A517E7200614B4A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7A1D7E92A517E7200614B4A /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		E7A1D7EA2A517E7200614B4A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		E7A1D7EB2A517E7200614B4A /* RendererAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RendererAdapter.h; sourceTree = "<group>"; };
+		E7A1D7EC2A517E7200614B4A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E7A1D7F22A517E7F00614B4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E7A1D7F42A517E8300614B4A /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		E7A1D7F62A517E8700614B4A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E7A1D7FE2A517F7000614B4A /* chip8main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chip8main.cpp; sourceTree = "<group>"; };
+		E7A1D7FF2A517F7000614B4A /* chip8main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chip8main.h; sourceTree = "<group>"; };
+		E7A1D8002A517F7000614B4A /* Renderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		E7A1D8012A517F7000614B4A /* emulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = emulator.cpp; sourceTree = "<group>"; };
+		E7A1D8022A517F7000614B4A /* shape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = shape.hpp; sourceTree = "<group>"; };
+		E7A1D8032A517F7000614B4A /* stack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stack.cpp; sourceTree = "<group>"; };
+		E7A1D8042A517F7000614B4A /* rectangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rectangle.hpp; sourceTree = "<group>"; };
+		E7A1D8052A517F7000614B4A /* emulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emulator.h; sourceTree = "<group>"; };
+		E7A1D8062A517F7000614B4A /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		E7A1D8072A517F7000614B4A /* rectangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rectangle.cpp; sourceTree = "<group>"; };
+		E7A1D8082A517F7000614B4A /* vec.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vec.hpp; sourceTree = "<group>"; };
+		E7A1D8092A517F7000614B4A /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		E7A1D8112A517FA700614B4A /* Metal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Metal.hpp; sourceTree = "<group>"; };
+		E7A1D8122A517FF400614B4A /* roms */ = {isa = PBXFileReference; lastKnownFileType = folder; path = roms; sourceTree = "<group>"; };
+		E7A1D8152A51801C00614B4A /* basic.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = basic.metal; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7A1D7C62A517E2C00614B4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A1D7F72A517E8700614B4A /* QuartzCore.framework in Frameworks */,
+				E7A1D7F52A517E8300614B4A /* Metal.framework in Frameworks */,
+				E7A1D7F32A517E7F00614B4A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E7A1D7C02A517E2C00614B4A = {
+			isa = PBXGroup;
+			children = (
+				E7A1D8122A517FF400614B4A /* roms */,
+				E7A1D7CB2A517E2C00614B4A /* Chip8-Metal */,
+				E7A1D7CA2A517E2C00614B4A /* Products */,
+				E7A1D7F12A517E7F00614B4A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E7A1D7CA2A517E2C00614B4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7A1D7C92A517E2C00614B4A /* Chip8-Metal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7A1D7CB2A517E2C00614B4A /* Chip8-Metal */ = {
+			isa = PBXGroup;
+			children = (
+				E7A1D8142A51801C00614B4A /* shaders */,
+				E7A1D80F2A517FA700614B4A /* include */,
+				E7A1D7FD2A517F7000614B4A /* src */,
+				E7A1D7EC2A517E7200614B4A /* AppDelegate.h */,
+				E7A1D7EA2A517E7200614B4A /* AppDelegate.mm */,
+				E7A1D7E62A517E7200614B4A /* GameViewController.h */,
+				E7A1D7E92A517E7200614B4A /* GameViewController.m */,
+				E7A1D7E72A517E7200614B4A /* main.m */,
+				E7A1D7EB2A517E7200614B4A /* RendererAdapter.h */,
+				E7A1D7E52A517E7200614B4A /* RendererAdapter.mm */,
+				E7A1D7D82A517E2D00614B4A /* Assets.xcassets */,
+				E7A1D7DA2A517E2D00614B4A /* Main.storyboard */,
+				E7A1D7DF2A517E2D00614B4A /* Chip8_Metal.entitlements */,
+			);
+			path = "Chip8-Metal";
+			sourceTree = "<group>";
+		};
+		E7A1D7F12A517E7F00614B4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7A1D7F62A517E8700614B4A /* QuartzCore.framework */,
+				E7A1D7F42A517E8300614B4A /* Metal.framework */,
+				E7A1D7F22A517E7F00614B4A /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7A1D7FD2A517F7000614B4A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E7A1D7FE2A517F7000614B4A /* chip8main.cpp */,
+				E7A1D7FF2A517F7000614B4A /* chip8main.h */,
+				E7A1D8002A517F7000614B4A /* Renderer.hpp */,
+				E7A1D8012A517F7000614B4A /* emulator.cpp */,
+				E7A1D8022A517F7000614B4A /* shape.hpp */,
+				E7A1D8032A517F7000614B4A /* stack.cpp */,
+				E7A1D8042A517F7000614B4A /* rectangle.hpp */,
+				E7A1D8052A517F7000614B4A /* emulator.h */,
+				E7A1D8062A517F7000614B4A /* stack.h */,
+				E7A1D8072A517F7000614B4A /* rectangle.cpp */,
+				E7A1D8082A517F7000614B4A /* vec.hpp */,
+				E7A1D8092A517F7000614B4A /* Renderer.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		E7A1D80F2A517FA700614B4A /* include */ = {
+			isa = PBXGroup;
+			children = (
+				E7A1D8102A517FA700614B4A /* Metal */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		E7A1D8102A517FA700614B4A /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				E7A1D8112A517FA700614B4A /* Metal.hpp */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		E7A1D8142A51801C00614B4A /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				E7A1D8152A51801C00614B4A /* basic.metal */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7A1D7C82A517E2C00614B4A /* Chip8-Metal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7A1D7E22A517E2D00614B4A /* Build configuration list for PBXNativeTarget "Chip8-Metal" */;
+			buildPhases = (
+				E7A1D7C52A517E2C00614B4A /* Sources */,
+				E7A1D7C62A517E2C00614B4A /* Frameworks */,
+				E7A1D7C72A517E2C00614B4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chip8-Metal";
+			productName = "Chip8-Metal";
+			productReference = E7A1D7C92A517E2C00614B4A /* Chip8-Metal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7A1D7C12A517E2C00614B4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					E7A1D7C82A517E2C00614B4A = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = E7A1D7C42A517E2C00614B4A /* Build configuration list for PBXProject "Chip8-Metal" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7A1D7C02A517E2C00614B4A;
+			productRefGroup = E7A1D7CA2A517E2C00614B4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7A1D7C82A517E2C00614B4A /* Chip8-Metal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7A1D7C72A517E2C00614B4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A1D8132A517FF400614B4A /* roms in Resources */,
+				E7A1D7D92A517E2D00614B4A /* Assets.xcassets in Resources */,
+				E7A1D7DC2A517E2D00614B4A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7A1D7C52A517E2C00614B4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A1D80E2A517F7000614B4A /* Renderer.cpp in Sources */,
+				E7A1D7EE2A517E7200614B4A /* main.m in Sources */,
+				E7A1D8162A51801C00614B4A /* basic.metal in Sources */,
+				E7A1D80C2A517F7000614B4A /* stack.cpp in Sources */,
+				E7A1D7EF2A517E7200614B4A /* GameViewController.m in Sources */,
+				E7A1D80D2A517F7000614B4A /* rectangle.cpp in Sources */,
+				E7A1D7F02A517E7200614B4A /* AppDelegate.mm in Sources */,
+				E7A1D80A2A517F7000614B4A /* chip8main.cpp in Sources */,
+				E7A1D80B2A517F7000614B4A /* emulator.cpp in Sources */,
+				E7A1D7ED2A517E7200614B4A /* RendererAdapter.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E7A1D7DA2A517E2D00614B4A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7A1D7DB2A517E2D00614B4A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7A1D7E02A517E2D00614B4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Chip8-Metal/include";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E7A1D7E12A517E2D00614B4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Chip8-Metal/include";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E7A1D7E32A517E2D00614B4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Chip8-Metal/Chip8_Metal.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5DE83FSD83;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.oskarzdz.Chip8-Metal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		E7A1D7E42A517E2D00614B4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Chip8-Metal/Chip8_Metal.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5DE83FSD83;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.oskarzdz.Chip8-Metal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7A1D7C42A517E2C00614B4A /* Build configuration list for PBXProject "Chip8-Metal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A1D7E02A517E2D00614B4A /* Debug */,
+				E7A1D7E12A517E2D00614B4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7A1D7E22A517E2D00614B4A /* Build configuration list for PBXNativeTarget "Chip8-Metal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A1D7E32A517E2D00614B4A /* Debug */,
+				E7A1D7E42A517E2D00614B4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7A1D7C12A517E2C00614B4A /* Project object */;
+}
