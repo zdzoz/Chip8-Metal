@@ -49,7 +49,7 @@
     _renderer = [[RendererAdapter alloc] initWithMetalKitView:_view];
 
     [_renderer mtkView:_view drawableSizeWillChange:_view.bounds.size];
-
+    
     _view.delegate = _renderer;
 }
 

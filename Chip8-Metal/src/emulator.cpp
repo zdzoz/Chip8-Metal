@@ -3,6 +3,8 @@
 #include "emulator.h"
 #include "Renderer.hpp"
 
+#include "Event.hpp"
+
 #define bool uint8_t
 #define TRUE 1
 #define FALSE 0
@@ -14,6 +16,7 @@
 #define UNIMPLEMENTED {disassemble(); printf("\tINSTRUCTION UNIMPLEMENTED - %s:%d\n", __FILE_NAME__, __LINE__); exit(-1);}
 
 State state;
+static Event e;
 
 bool isEmulatorRunning;
 
@@ -272,39 +275,35 @@ int disassemble() {
 void handle_input() {
     KEY = -1;
     // FIXME: HANDLE_INPUT
-//    printf("HANDLE_INPUT: FIXME\n");
-    // Poll window events
-//    while (SDL_PollEvent(&e)) {
-//        switch (e.type) {
-//            case SDL_QUIT: isEmulatorRunning = FALSE; break;
-//            case SDL_KEYUP:
-//                switch (e.key.keysym.sym) {
-//                    default: HELDKEY = -1; break;
-//                }
-//                break;
-//            case SDL_KEYDOWN:
-//                switch (e.key.keysym.sym) {
-//                    case SDLK_ESCAPE: isEmulatorRunning = FALSE; break;
-//                    case SDLK_0: KEY = 0; break;
-//                    case SDLK_1: KEY = 1; break;
-//                    case SDLK_2: KEY = 2; break;
-//                    case SDLK_3: KEY = 3; break;
-//                    case SDLK_4: KEY = 4; break;
-//                    case SDLK_5: KEY = 5; break;
-//                    case SDLK_6: KEY = 6; break;
-//                    case SDLK_7: KEY = 7; break;
-//                    case SDLK_8: KEY = 8; break;
-//                    case SDLK_9: KEY = 9; break;
-//                    case SDLK_a: KEY = 0xa; break;
-//                    case SDLK_b: KEY = 0xb; break;
-//                    case SDLK_c: KEY = 0xc; break;
-//                    case SDLK_d: KEY = 0xd; break;
-//                    case SDLK_e: KEY = 0xe; break;
-//                    case SDLK_f: KEY = 0xf; break;
-//                    default: KEY = -1;
-//                }
-//                HELDKEY = KEY;
-//                break;
-//        }
-//    }
+    switch (e.eventType()) {
+        case EventType::KeyUp:
+            HELDKEY = -1; break;
+            
+        case EventType::KeyDown:
+            std::cout << e.keyCode() << std::endl;
+            switch (e.keyCode()) {
+                case (uint64_t)Key::ESC: exit(0);
+                case (uint64_t)Key::ZERO: KEY = 0; break;
+                case (uint64_t)Key::ONE: KEY = 1; break;
+                case (uint64_t)Key::TWO: KEY = 2; break;
+                case (uint64_t)Key::THREE: KEY = 3; break;
+                case (uint64_t)Key::FOUR: KEY = 4; break;
+                case (uint64_t)Key::FIVE: KEY = 5; break;
+                case (uint64_t)Key::SIX: KEY = 6; break;
+                case (uint64_t)Key::SEVEN: KEY = 7; break;
+                case (uint64_t)Key::EIGHT: KEY = 8; break;
+                case (uint64_t)Key::NINE: KEY = 9; break;
+                case (uint64_t)Key::A: KEY = 0xa; break;
+                case (uint64_t)Key::B: KEY = 0xb; break;
+                case (uint64_t)Key::C: KEY = 0xc; break;
+                case (uint64_t)Key::D: KEY = 0xd; break;
+                case (uint64_t)Key::E: KEY = 0xe; break;
+                case (uint64_t)Key::F: KEY = 0xf; break;
+                case (uint64_t)Key::L_ARR: KEY = 4; break;
+                case (uint64_t)Key::R_ARR: KEY = 6; break;
+                default: KEY = -1;
+            }
+            HELDKEY = KEY;
+            break;
+    }
 }

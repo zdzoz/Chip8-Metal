@@ -17,11 +17,10 @@
 -(nonnull instancetype)initWithMetalKitView:(nonnull MTKView *)view;
 {
     self = [super init];
-    if(self)
+    if (self)
     {
         _renderer = std::make_unique<Renderer>((__bridge MTL::Device*)view.device);
     }
-
     return self;
 }
 

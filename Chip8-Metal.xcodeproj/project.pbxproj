@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E735C3EA2A53AE7F0010681C /* GameView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E735C3E92A53AE7F0010681C /* GameView.mm */; };
+		E735C3ED2A53B0FE0010681C /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E735C3EB2A53B0FE0010681C /* Event.cpp */; };
 		E7A1D7D92A517E2D00614B4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A1D7D82A517E2D00614B4A /* Assets.xcassets */; };
 		E7A1D7DC2A517E2D00614B4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A1D7DA2A517E2D00614B4A /* Main.storyboard */; };
 		E7A1D7ED2A517E7200614B4A /* RendererAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7A1D7E52A517E7200614B4A /* RendererAdapter.mm */; };
@@ -26,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E735C3E82A53AE7F0010681C /* GameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		E735C3E92A53AE7F0010681C /* GameView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GameView.mm; sourceTree = "<group>"; };
+		E735C3EB2A53B0FE0010681C /* Event.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = "<group>"; };
+		E735C3EC2A53B0FE0010681C /* Event.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Event.hpp; sourceTree = "<group>"; };
 		E7A1D7C92A517E2C00614B4A /* Chip8-Metal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chip8-Metal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A1D7D82A517E2D00614B4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7A1D7DB2A517E2D00614B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +105,8 @@
 				E7A1D7EA2A517E7200614B4A /* AppDelegate.mm */,
 				E7A1D7E62A517E7200614B4A /* GameViewController.h */,
 				E7A1D7E92A517E7200614B4A /* GameViewController.m */,
+				E735C3E82A53AE7F0010681C /* GameView.h */,
+				E735C3E92A53AE7F0010681C /* GameView.mm */,
 				E7A1D7E72A517E7200614B4A /* main.m */,
 				E7A1D7EB2A517E7200614B4A /* RendererAdapter.h */,
 				E7A1D7E52A517E7200614B4A /* RendererAdapter.mm */,
@@ -122,6 +130,8 @@
 		E7A1D7FD2A517F7000614B4A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				E735C3EB2A53B0FE0010681C /* Event.cpp */,
+				E735C3EC2A53B0FE0010681C /* Event.hpp */,
 				E7A1D7FE2A517F7000614B4A /* chip8main.cpp */,
 				E7A1D7FF2A517F7000614B4A /* chip8main.h */,
 				E7A1D8002A517F7000614B4A /* Renderer.hpp */,
@@ -232,11 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E735C3ED2A53B0FE0010681C /* Event.cpp in Sources */,
 				E7A1D80E2A517F7000614B4A /* Renderer.cpp in Sources */,
 				E7A1D7EE2A517E7200614B4A /* main.m in Sources */,
 				E7A1D8162A51801C00614B4A /* basic.metal in Sources */,
 				E7A1D80C2A517F7000614B4A /* stack.cpp in Sources */,
 				E7A1D7EF2A517E7200614B4A /* GameViewController.m in Sources */,
+				E735C3EA2A53AE7F0010681C /* GameView.mm in Sources */,
 				E7A1D80D2A517F7000614B4A /* rectangle.cpp in Sources */,
 				E7A1D7F02A517E7200614B4A /* AppDelegate.mm in Sources */,
 				E7A1D80A2A517F7000614B4A /* chip8main.cpp in Sources */,
