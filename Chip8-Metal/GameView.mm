@@ -17,12 +17,10 @@
 
 -(void)keyDown:(NSEvent *)event {
     EventImplementation::instance()->_setup(event.keyCode, EventType::KeyDown);
-    [super keyDown:event];
 }
 
 -(void)keyUp:(NSEvent *)event {
     EventImplementation::instance()->_setup(event.keyCode, EventType::KeyUp);
-    [super keyUp:event];
 }
 
 @end

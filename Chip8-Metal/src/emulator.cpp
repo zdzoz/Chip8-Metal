@@ -274,13 +274,11 @@ int disassemble() {
 
 void handle_input() {
     KEY = -1;
-    // FIXME: HANDLE_INPUT
     switch (e.eventType()) {
         case EventType::KeyUp:
             HELDKEY = -1; break;
             
         case EventType::KeyDown:
-            std::cout << e.keyCode() << std::endl;
             switch (e.keyCode()) {
                 case (uint64_t)Key::ESC: exit(0);
                 case (uint64_t)Key::ZERO: KEY = 0; break;

@@ -98,21 +98,21 @@
 		E7A1D7CB2A517E2C00614B4A /* Chip8-Metal */ = {
 			isa = PBXGroup;
 			children = (
-				E7A1D8142A51801C00614B4A /* shaders */,
-				E7A1D80F2A517FA700614B4A /* include */,
-				E7A1D7FD2A517F7000614B4A /* src */,
+				E7A1D7DF2A517E2D00614B4A /* Chip8_Metal.entitlements */,
 				E7A1D7EC2A517E7200614B4A /* AppDelegate.h */,
-				E7A1D7EA2A517E7200614B4A /* AppDelegate.mm */,
-				E7A1D7E62A517E7200614B4A /* GameViewController.h */,
-				E7A1D7E92A517E7200614B4A /* GameViewController.m */,
 				E735C3E82A53AE7F0010681C /* GameView.h */,
-				E735C3E92A53AE7F0010681C /* GameView.mm */,
-				E7A1D7E72A517E7200614B4A /* main.m */,
+				E7A1D7E62A517E7200614B4A /* GameViewController.h */,
 				E7A1D7EB2A517E7200614B4A /* RendererAdapter.h */,
+				E7A1D7E92A517E7200614B4A /* GameViewController.m */,
+				E7A1D7E72A517E7200614B4A /* main.m */,
+				E7A1D7EA2A517E7200614B4A /* AppDelegate.mm */,
+				E735C3E92A53AE7F0010681C /* GameView.mm */,
 				E7A1D7E52A517E7200614B4A /* RendererAdapter.mm */,
 				E7A1D7D82A517E2D00614B4A /* Assets.xcassets */,
+				E7A1D80F2A517FA700614B4A /* include */,
 				E7A1D7DA2A517E2D00614B4A /* Main.storyboard */,
-				E7A1D7DF2A517E2D00614B4A /* Chip8_Metal.entitlements */,
+				E7A1D8142A51801C00614B4A /* shaders */,
+				E7A1D7FD2A517F7000614B4A /* src */,
 			);
 			path = "Chip8-Metal";
 			sourceTree = "<group>";
@@ -130,20 +130,20 @@
 		E7A1D7FD2A517F7000614B4A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				E735C3EB2A53B0FE0010681C /* Event.cpp */,
-				E735C3EC2A53B0FE0010681C /* Event.hpp */,
 				E7A1D7FE2A517F7000614B4A /* chip8main.cpp */,
 				E7A1D7FF2A517F7000614B4A /* chip8main.h */,
-				E7A1D8002A517F7000614B4A /* Renderer.hpp */,
 				E7A1D8012A517F7000614B4A /* emulator.cpp */,
+				E7A1D8052A517F7000614B4A /* emulator.h */,
+				E735C3EB2A53B0FE0010681C /* Event.cpp */,
+				E735C3EC2A53B0FE0010681C /* Event.hpp */,
+				E7A1D8072A517F7000614B4A /* rectangle.cpp */,
+				E7A1D8042A517F7000614B4A /* rectangle.hpp */,
+				E7A1D8092A517F7000614B4A /* Renderer.cpp */,
+				E7A1D8002A517F7000614B4A /* Renderer.hpp */,
 				E7A1D8022A517F7000614B4A /* shape.hpp */,
 				E7A1D8032A517F7000614B4A /* stack.cpp */,
-				E7A1D8042A517F7000614B4A /* rectangle.hpp */,
-				E7A1D8052A517F7000614B4A /* emulator.h */,
 				E7A1D8062A517F7000614B4A /* stack.h */,
-				E7A1D8072A517F7000614B4A /* rectangle.cpp */,
 				E7A1D8082A517F7000614B4A /* vec.hpp */,
-				E7A1D8092A517F7000614B4A /* Renderer.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
